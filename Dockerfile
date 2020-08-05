@@ -9,7 +9,8 @@ RUN apk --no-cache add git && \
     cd /mix_proj && \
     mix local.hex --force && \
     mix deps.get && \
-    mix deps.compile
+    mix deps.compile && \
+    mix run -e "IO.puts(:ok)"
 
 WORKDIR /workdir
 
